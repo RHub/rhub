@@ -15,8 +15,8 @@ development:
   database: rhub_development
   pool: 5
   username: root
-  password:
-  host: localhost
+  password: root
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,15 +28,5 @@ test:
   database: rhub_test
   pool: 5
   username: root
-  password:
-  host: localhost
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: rhub_production
-  pool: 5
-  username: root
-  password:
-  host: localhost
+  password: root
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
