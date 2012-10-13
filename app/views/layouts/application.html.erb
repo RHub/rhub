@@ -51,6 +51,26 @@
               <li><%= link_to "Link2", "/path2"  %></li>
               <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
+            
+            <ul class="nav pull-right">
+              <li id="fat-menu" class="dropdown">
+                <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">My Account<b class="caret"></b></a>
+                <% if user_signed_in? %>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                    <li><a tabindex="-1" href="#">Email</a></li>
+                    <li><a tabindex="-1" href="#">Edit Account</a></li>
+                    <li class="divider"></li>
+                    <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+                  </ul>
+                <% else %>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                    <li><%= link_to "Log In", new_user_session_path, :tabindex => "-1" %></li>
+                    <li><%= link_to "Sign Up", new_user_registration_path, :tabindex => "-1" %></li>
+                  </ul>
+                <% end %>
+                
+              </li>
+            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
