@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-server "23.23.23.87", :web, :app, :db, primary: true
+server "54.243.204.182", :web, :app, :db, primary: true
 
 set :application, "rhub"
 set :user, "deployer"
