@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+
+// Paper form textfield auto growth
+$(document).ready(function(){
+	$("#paper_docdata").autoGrow();
+});
